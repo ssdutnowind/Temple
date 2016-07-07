@@ -180,7 +180,62 @@ body {
     position: relative;
     height: 525px;
     margin: 30px 0;
-    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.slider-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-images img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.slider-marks {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    padding: 20px;
+}
+
+.slider-marks span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.slider-marks span.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.slider-pointer-left {
+    width: 30px;
+    height: 46px;
+    background-image: url("../img/prev.png");
+    cursor: pointer;
+    position: absolute;
+    top: 240px;
+    left: -40px;
+}
+
+.slider-pointer-right {
+    width: 30px;
+    height: 46px;
+    background-image: url("../img/next.png");
+    cursor: pointer;
+    position: absolute;
+    top: 240px;
+    right: -40px;
 }
 
 .main-container {
@@ -255,13 +310,18 @@ body {
 
 .content-block ul {
     margin: 0;
-    padding-left: 20px;
+    padding: 0;
 }
 
 .content-block li {
     margin: 0;
-    list-style-type: square;
-    list-style-image: url("../img/dot.png");
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 20px;
+    background-image: url("../img/dot.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
 }
 
 .content-block li a {
@@ -298,6 +358,8 @@ body {
 
 .block-small .content-block li {
     margin-bottom: 20px;
+    background-image: none;
+    padding: 0;
 }
 
 .block-small .content-block li p {
