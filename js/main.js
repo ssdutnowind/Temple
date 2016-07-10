@@ -1,17 +1,17 @@
 $(function () {
 
-    // �ֲ�ͼ
+    // 轮播图
     if ($('.slider-container').length > 0) {
 
         var currentIndex = 0;
         var timer = setTimeout(showNext, 5000);
 
         /**
-         * ��ʾָ���ֲ�ͼ
+         * 显示指定轮播图
          * @param index
          */
         function showSlider(index) {
-            // �����ʱ��
+            // 清除定时器
             clearTimeout(timer);
             timer = setTimeout(showNext, 5000);
 
@@ -27,7 +27,7 @@ $(function () {
         }
 
         /**
-         * ��ʾ��һ���ֲ�ͼ
+         * 显示下一个轮播图
          */
         function showNext() {
             if (currentIndex === $('.slider-marks span').length - 1) {
@@ -39,7 +39,7 @@ $(function () {
         }
 
         /**
-         * ��ʾǰһ���ֲ�ͼ
+         * 显示前一个轮播图
          */
         function showPrev() {
             if (currentIndex === 0) {
@@ -50,20 +50,49 @@ $(function () {
             showSlider(currentIndex);
         }
 
-        // ��ʼ��
+        // 初始化
         $('.slider-container .slider-images img').eq(0).css('opacity', 1);
         $('.slider-marks span').eq(0).css('background-color', 'rgba(255, 255, 255, 1)');
         $('.slider-marks span').each(function (index) {
             $(this).attr('data-index', index);
         });
 
-        // ���Բ��
+        // 点击圆点
         $('.slider-marks span').bind('click', function () {
             showSlider($(this).attr('data-index'));
         });
 
-        // ǰһҳ��һҳ
+        // 前一页后一页
         $('.slider-pointer-left').bind('click', showPrev);
         $('.slider-pointer-right').bind('click', showNext);
     }
+
+    // 分享至
+    $('.share-to').bind('click', function () {
+
+        if ($('#shareMask').length === 0) {
+            var html = '';
+            html += '<div class="share-mask" id="shareMask">';
+            html += '<div class="share-content">';
+            html += '<div style="position: relative; width: 100%; height: 100%; overflow: hidden">';
+            html += '<span class="share-close"></span>';
+            html += '<div class="share-qrcode" id="shareQRCode"></div>';
+            html += '<div class="share-tip">使用微信扫一扫，在移动端阅读本文</div>';
+            html += '</div>';
+            html += '</div>';
+            html += '</div>';
+            $('body').append(html);
+
+            $('.share-close').bind('click', function () {
+                $('#shareMask').hide();
+            });
+        }
+        $('#shareQRCode').empty();
+        var qrCode = new QRCode($('#shareQRCode')[0], {
+            text: location.href
+        });
+        setTimeout(function () {
+            $('#shareMask').show();
+        }, 50);
+    });
 });

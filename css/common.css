@@ -120,6 +120,7 @@ body {
     line-height: 68px;
     text-align: center;
     text-decoration: none;
+    margin: 0 -14px;
     cursor: pointer;
 }
 
@@ -373,13 +374,18 @@ body {
 }
 
 /* 文章类 */
+/* 左侧列表类 */
 .article {
     position: relative;
     background-color: #e6daca;
-    min-height: 1000px;
+    min-height: 500px;
     padding: 50px 55px 50px 300px;
     margin-top: 30px;
     border: 1px solid #cfbda6;
+}
+
+.article.with-content {
+    padding: 50px 105px;
 }
 
 .article-list {
@@ -415,6 +421,71 @@ body {
     background-color: #e6daca;
 }
 
+/* 右侧列表类 */
+.content-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-height: 780px;
+}
+
+.content-list li {
+    margin: 0;
+    height: 60px;
+    padding-left: 20px;
+    line-height: 60px;
+    background-image: url("../img/dot.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    border-bottom: 1px solid #cdbaa4;
+}
+
+.content-list li a {
+    font-size: 18px;
+    color: #663d20;
+    display: inline-block;
+    width: 825px;
+    text-decoration: none;
+}
+
+.with-content .content-list li a {
+    width: 970px;
+}
+
+.content-list li .content-title {
+    display: inline-block;
+    width: 700px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.content-list li .content-date {
+    float: right;
+}
+
+/* 分页 */
+.paging {
+    height: 50px;
+    text-align: center;
+}
+
+.paging .page {
+    border: 1px solid #a98e77;
+    background-color: #cfbca4;
+    color: #815b3f;
+    font-size: 14px;
+    padding: 3px 8px;
+    margin: 3px;
+    text-decoration: none;
+}
+
+.paging .page.active {
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+/* 正文 */
 .text-content {
 
 }
@@ -422,7 +493,6 @@ body {
 .text-content h1 {
     font-size: 26px;
     font-weight: bold;
-    text-align: center;
     color: #876849;
 }
 
@@ -437,4 +507,72 @@ body {
     color: #876849;
     margin: 0;
     line-height: 36px;
+}
+
+.text-content video {
+    display: block;
+    width: 980px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* 分享至 */
+.share-to {
+    float: right;
+    height: 45px;
+    line-height: 45px;
+    padding-right: 50px;
+    color: #663d20;
+    font-size: 16px;
+    background-image: url("../img/wechat.png");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    cursor: pointer;
+}
+
+.share-mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.share-content {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #d4c2a9;
+}
+
+.share-content .share-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-image: url("../img/icon_close.png");
+    background-size: 50% 50%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.share-content .share-qrcode img {
+    display: block;
+    margin: 50px auto 10px;
+}
+
+.share-content .share-tip {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #663d20;
+    margin-bottom: 30px;
 }
