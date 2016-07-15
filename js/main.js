@@ -88,9 +88,10 @@ $(function () {
             });
         }
         $('#shareQRCode').empty();
+        var path = (location.origin + location.pathname).replace(/\/(\w)+(\.html)/g, '/');
         var qrCode = new QRCode($('#shareQRCode')[0], {
             //text: location.href
-            text: location.href = 'mobile.html' + location.search
+            text: path + 'mobile.html' + location.search
         });
         setTimeout(function () {
             $('#shareMask').show();
