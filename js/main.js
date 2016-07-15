@@ -89,7 +89,8 @@ $(function () {
         }
         $('#shareQRCode').empty();
         var qrCode = new QRCode($('#shareQRCode')[0], {
-            text: location.href
+            //text: location.href
+            text: location.href = 'mobile.html' + location.search
         });
         setTimeout(function () {
             $('#shareMask').show();
