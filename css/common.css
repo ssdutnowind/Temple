@@ -115,7 +115,7 @@ body {
     width: 200px;
     height: 68px;
     float: left;
-    font-size: 26px;
+    font-size: 24px;
     color: #f0e4c9;
     line-height: 68px;
     text-align: center;
@@ -301,7 +301,7 @@ body {
     bottom: 0;
     height: 50px;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     white-space: nowrap;
     overflow: hidden;
@@ -326,7 +326,7 @@ body {
 }
 
 .content-block li a {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
     line-height: 40px;
     white-space: nowrap;
@@ -349,7 +349,7 @@ body {
 
 .block-small .block-body {
     padding: 22px 0;
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
 }
 
@@ -441,7 +441,7 @@ body {
 }
 
 .content-list li a {
-    font-size: 18px;
+    font-size: 16px;
     color: #663d20;
     display: inline-block;
     width: 825px;
@@ -503,7 +503,7 @@ body {
 }
 
 .text-content p {
-    font-size: 18px;
+    font-size: 14px;
     color: #876849;
     margin: 0;
     line-height: 36px;
