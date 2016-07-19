@@ -97,4 +97,11 @@ $(function () {
             $('#shareMask').show();
         }, 50);
     });
+
+    // 动态算一下高度
+    if ($('.article-list').length > 0) {
+        if ($('.article').height() < $('.article-list').height() -100) {
+            $('.article').height($('.article-list').height() - 100);
+        }
+    }
 });
