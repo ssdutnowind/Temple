@@ -328,7 +328,7 @@ body {
 .content-block li a {
     font-size: 16px;
     color: #333;
-    line-height: 40px;
+    line-height: 35px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -365,7 +365,7 @@ body {
 
 .block-small .content-block li p {
     margin: 0;
-    line-height: 30px;
+    line-height: 26px;
     text-indent: 56px;
 }
 
@@ -402,7 +402,7 @@ body {
 
 .article-list li {
     list-style-type: none;
-    line-height: 66px;
+    line-height: 60px;
 }
 
 .article-list li a {
@@ -432,9 +432,9 @@ body {
 
 .content-list li {
     margin: 0;
-    height: 60px;
+    height: 50px;
     padding-left: 20px;
-    line-height: 60px;
+    line-height: 50px;
     background-image: url("../img/dot.png");
     background-repeat: no-repeat;
     background-position: 0 50%;
@@ -507,7 +507,7 @@ body {
     font-size: 16px;
     color: #876849;
     margin: 0;
-    line-height: 36px;
+    line-height: 30px;
 }
 
 .text-content video {
